@@ -9,15 +9,10 @@ import { Dish } from './dish';
 })
 export class AppComponent {
 
-	data:Dish = 
-	{
-		name: 'Chicken Burger',
-		cal: 0,
-		carbs: 0,
-		fat: 0,
-		protein: 0,
-		img: 'https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg'
-	}
+	totalCals = 0;
+	totalCarbs = 0;
+	totalFat = 0;
+	totalProtein = 0;
 	title = 'whattoeat';	
 
 	generateDish() {

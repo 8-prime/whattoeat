@@ -294,14 +294,28 @@
 </style>
 
 <div class="flex flex-row justify-center font-sans flex-wrap bg-gray-100 h-screen">
-	<div class="w-full flex justify-center">
-		<h1 class="text-xl">What to Eat?!</h1>
+	<div class="w-full flex justify-center mt-10">
+		<h1 class="text-6xl font-sans">What to Eat?!</h1>
 	</div>
-	<div class="flex justify-center items-baseline mt-4 mb-6 pb-6 w-full">
-		<button class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded w-64">
+	<div class="flex justify-evenly items-center flex-col  mt-4 mb-6 pb-6 w-full">
+		<button class="text-lg bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded w-64 active:bg-gray-400 active:drop-shadow-md">
 			Generate new recipies
 		</button>
+		<button class="text-lg bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded w-64 active:bg-gray-400 active:drop-shadow-md">
+			Copy shopping list
+		</button>
 	</div>
+  <div class="flex flex-col w-full items-center">
+    <div class="bg-gray-50 flex items-center flex-col rounded drop-shadow-md p-5 w-fit">
+      <h2 class="text-xl">Total Macros:</h2>
+      <ul class="text-lg flex flex-row flex-wrap justify-evenly">
+        <li class="p-5">Calories: {{totalCals}}</li>
+        <li class="p-5">Carbs: {{totalCarbs}}</li>
+        <li class="p-5">Fat: {{totalFat}}</li>
+        <li class="p-5">Protein: {{totalProtein}}</li>
+      </ul>
+    </div>
+  </div>
 	<div class="flex flex-row flex-wrap justify-evenly">
 		<app-fooditem [dish]=generateDish()></app-fooditem>
 		<app-fooditem [dish]=generateDish()></app-fooditem>
